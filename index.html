@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Lytegen Solar | Dillon Stimpson</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Helvetica Neue', Arial, sans-serif; }
+body { background-color: #f9fafb; color: #333; }
+
+/* General Sections */
+section { padding: 60px 20px; max-width: 1100px; margin: 0 auto; }
+h2 { color: #0077b6; }
+p { line-height: 1.6; }
+
+/* HEADER */
+header { position: relative; background: url('https://images.unsplash.com/photo-1509395062183-67c5ad6faff9?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat; height: 90vh; display: flex; justify-content: center; align-items: center; text-align: center; color: white; }
+header::before { content: ""; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.45); z-index: 0; }
+.header-content { position: relative; z-index: 1; background: rgba(0,0,0,0.4); padding: 30px 40px; border-radius: 10px; max-width: 90%; }
+.header-content h1 { font-size: 3rem; margin-bottom: 10px; }
+.header-content h2 { font-size: 1.5rem; font-weight: 400; margin-bottom: 15px; color: #a9d6e5; }
+.header-content p { font-size: 1.2rem; line-height: 1.6; margin-bottom: 25px; }
+.header-buttons { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+.header-buttons button { background-color: #0077b6; color: white; border: none; padding: 14px 28px; border-radius: 5px; font-size: 1.1rem; cursor: pointer; transition: background 0.3s; }
+.header-buttons button:hover { background-color: #005f86; }
+
+/* Reasons Section */
+.reasons { background-color: #ffffff; text-align: center; border-top: 1px solid #e5e5e5; border-bottom: 1px solid #e5e5e5; padding: 70px 20px; }
+.reasons h2 { margin-bottom: 25px; font-size: 2rem; }
+.reasons-list { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-top: 20px; }
+.reason { background-color: #e9f5f9; border-radius: 10px; padding: 25px; width: 300px; box-shadow: 0 3px 8px rgba(0,0,0,0.1); }
+.reason h3 { color: #004b63; margin-bottom: 10px; }
+.reason p { font-size: 1rem; color: #333; }
+
+/* PPA Section */
+.ppa { background-color: #f1f9ff; padding: 70px 20px; text-align: center; }
+.ppa h2 { font-size: 2rem; margin-bottom: 20px; }
+.ppa p { font-size: 1.1rem; line-height: 1.6; max-width: 800px; margin: 0 auto 20px; }
+
+/* Forms */
+form { background-color: #e9f5f9; padding: 40px 25px; border-radius: 10px; display: flex; flex-direction: column; gap: 15px; max-width: 600px; margin: 40px auto 0 auto; }
+input, textarea { padding: 12px; border: 1px solid #ccc; border-radius: 5px; font-size: 1rem; }
+button.submit-btn { background-color: #0077b6; color: white; font-size: 1.1rem; padding: 14px; border: none; border-radius: 5px; cursor: pointer; transition: background 0.3s; }
+button.submit-btn:hover { background-color: #005f86; }
+
+/* Footer */
+footer { background-color: #004b63; color: white; text-align: center; padding: 30px 20px; }
+
+/* Portal Pages */
+.portal { display: none; animation: fadeIn 0.6s ease-in-out; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.back-btn { display: inline-block; background-color: #0077b6; color: white; padding: 10px 20px; border-radius: 5px; margin-bottom: 20px; text-decoration: none; cursor: pointer; transition: background 0.3s; }
+.back-btn:hover { background-color: #005f86; }
+
+#admin-list { max-width: 800px; margin: 20px auto 0 auto; background-color: #e9f5f9; padding: 20px; border-radius: 10px; }
+
+</style>
+</head>
+<body>
+
+<!-- HOME PAGE -->
+<div id="home">
+<header>
+<div class="header-content">
+<h1>Lytegen Solar</h1>
+<h2>with Dillon Stimpson</h2>
+<p>Switch to clean, renewable energy with confidence.<br>Schedule your <strong>Free In-Home Consultation</strong> or request a <strong>Free Estimate</strong> today!</p>
+<div class="header-buttons">
+<button onclick="showPage('consultation')">Free Consultation</button>
+<button onclick="showPage('estimate')">Get a Free Estimate</button>
+<button onclick="showPage('login')">Login</button>
+</div>
+</div>
+</header>
+
+<section class="about">
+<h2>Why Choose Lytegen?</h2>
+<p>At Lytegen Solar, we make it simple to go solar. With free in-home consultations and no-obligation estimates, you’ll receive a clear picture of how much you can save and how solar can boost your home’s value.  
+<br><br>I’m <strong>Dillon Stimpson</strong>, your dedicated solar consultant. My mission is to provide every homeowner with honest, transparent information and top-quality solar technology for long-term savings and sustainability.</p>
+</section>
+
+<section class="reasons">
+<h2>Top Reasons to Go Solar</h2>
+<div class="reasons-list">
+<div class="reason"><h3>Save Money</h3><p>Reduce or even eliminate your monthly electricity bill and lock in predictable rates for years to come.</p></div>
+<div class="reason"><h3>Increase Home Value</h3><p>Homes with solar panels sell faster and at higher prices than homes without them.</p></div>
+<div class="reason"><h3>Energy Independence</h3><p>Gain control over your own power source and protect yourself from rising utility costs.</p></div>
+<div class="reason"><h3>Environmental Impact</h3><p>Switch to clean energy and reduce your carbon footprint to create a sustainable future.</p></div>
+</div>
+</section>
+
+<section class="ppa">
+<h2>The Lytegen PPA Program</h2>
+<p>Our most popular option — the <strong>Power Purchase Agreement (PPA)</strong> — lets homeowners go solar with <strong>no upfront cost</strong>. We cover installation, equipment, and maintenance completely free.</p>
+<p>Instead of paying for panels, you simply pay for the power they produce — at a lower rate than your utility company. You save money from day one, enjoy clean renewable energy, and never worry about maintenance or repair costs.</p>
+<p>Prefer to <strong>own your system</strong>? We also offer easy <strong>financing options</strong> and <strong>cash purchase</strong> discounts for maximum long-term savings.</p>
+</section>
+</div>
+
+<!-- CONSULTATION PORTAL -->
+<div id="consultation" class="portal">
+<section>
+<button class="back-btn" onclick="showPage('home')">← Back to Home</button>
+<h2>Free In-Home Consultation</h2>
+<p>Book an in-home visit where we’ll review your current utility bill, design a custom solar system, and provide a full pricing proposal — all for free.</p>
+<form id="consultationForm">
+<input type="text" placeholder="Full Name" required>
+<input type="email" placeholder="Email Address" required>
+<input type="tel" placeholder="Phone Number" required>
+<textarea rows="4" placeholder="Message or Address"></textarea>
+<button type="submit" class="submit-btn">Submit Request</button>
+</form>
+</section>
+</div>
+
+<!-- ESTIMATE PORTAL -->
+<div id="estimate" class="portal">
+<section>
+<button class="back-btn" onclick="showPage('home')">← Back to Home</button>
+<h2>Get a Free Estimate</h2>
+<p>We’ll analyze your energy usage from your utility bill and provide a free solar system estimate tailored to your home’s needs — no visit required.</p>
+<form id="estimateForm">
+<input type="text" placeholder="Full Name" required>
+<input type="email" placeholder="Email Address" required>
+<input type="tel" placeholder="Phone Number" required>
+<textarea rows="4" placeholder="Upload utility info or message"></textarea>
+<button type="submit" class="submit-btn">Request Estimate</button>
+</form>
+</section>
+</div>
+
+<!-- LOGIN PORTAL -->
+<div id="login" class="portal">
+<section>
+<button class="back-btn" onclick="showPage('home')">← Back to Home</button>
+<h2>Admin Login</h2>
+<p>Enter your username and password to access the admin portal.</p>
+<form id="loginForm">
+<input type="text" id="username" placeholder="Username" required>
+<input type="password" id="password" placeholder="Password" required>
+<button type="submit" class="submit-btn">Login</button>
+</form>
+<p id="loginError" style="color:red; text-align:center; margin-top:10px;"></p>
+</section>
+</div>
+
+<!-- ADMIN PORTAL -->
+<div id="admin" class="portal">
+<section>
+<button class="back-btn" onclick="showPage('home')">← Back to Home</button>
+<h2>Admin Portal</h2>
+<p>Welcome! Here are all form submissions from your website:</p>
+<ol id="admin-list"></ol>
+</section>
+</div>
+
+<footer>
+<h3>Lytegen Solar</h3>
+<p>Dillon Stimpson | (203) 521-4551 | Dillon@Lytegen.com</p>
+<p>&copy; 2025 Lytegen | Empowering homes with clean, renewable energy</p>
+</footer>
+
+<script>
+let submissions = [];
+
+// Page navigation
+function showPage(pageId){
+document.querySelectorAll('#home, #consultation, #estimate, #login, #admin').forEach(sec => sec.style.display='none');
+document.getElementById(pageId).style.display='block';
+window.scrollTo({top:0, behavior:'smooth'});
+}
+
+// Show home by default
+showPage('home');
+
+// Login form
+document.getElementById('loginForm').addEventListener('submit', function(e){
+e.preventDefault();
+let username = document.getElementById('username').value.trim().toLowerCase();
+let password = document.getElementById('password').value.trim().toLowerCase();
+if(username==='solar' && password==='panels'){
+showPage('admin');
+renderSubmissions();
+} else {
+document.getElementById('loginError').innerText='Incorrect username or password.';
+}
+});
+
+// Submission forms
+function handleForm(formId){
+document.getElementById(formId).addEventListener('submit', function(e){
+e.preventDefault();
+let inputs = this.querySelectorAll('input, textarea');
+submissions.push({
+name: inputs[0].value.trim(),
+email: inputs[1].value.trim(),
+phone: inputs[2].value.trim(),
+notes: inputs[3].value.trim()
+});
+alert('Thank you! Your submission has been recorded.');
+this.reset();
+});
+}
+
+handleForm('consultationForm');
+handleForm('estimateForm');
+
+// Render submissions in admin portal
+function renderSubmissions(){
+let list = document.getElementById('admin-list');
+list.innerHTML='';
+submissions.forEach((s,i)=>{
+let li = document.createElement('li');
+li.innerHTML = `<strong>Name:</strong> ${s.name} | <strong>Email:</strong> ${s.email} | <strong>Phone:</strong> ${s.phone} | <strong>Notes:</strong> ${s.notes}`;
+list.appendChild(li);
+});
+}
+</script>
+
+</body>
+</html>
